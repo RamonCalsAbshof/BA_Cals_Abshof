@@ -1,0 +1,52 @@
+.table-wrapper{
+  height:100%;
+  width:100%;
+}
+.table-wrapper input{
+  color: black;
+  padding:10px;
+  border:1px solid #ced6e0;
+  border-radius:10px;
+  outline: none;
+  background: transparent;
+  font-size:18px;
+  align:right;
+}
+.table-wrapper select{
+  display: inline-block;
+  appearance: none;
+  outline: 0;
+  cursor:pointer;
+  border: 0;
+  background:lightgrey;
+  padding: 10px;
+  font-size:18px;
+  margin:0 5px;
+}
+.rdt_Table{
+}
+.rdt_TableRow{
+}
+.rdt_TableCol{
+}
+.rdt_TableCol_Sortable{
+  font-size:18px;
+}
+.rdt_TableCell{
+  font-size:18px;
+  margin:0 10px;
+}
+.rdt_TableHeader{
+}
+.rdt_TableFooter{
+}
+.rdt_TableHead{
+}
+.rdt_TableHeadRow{
+}
+.rdt_TableBody{
+}
+.rdt_ExpanderRow{
+}
+
+

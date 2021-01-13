@@ -1,0 +1,33 @@
+{
+  "algorithm_display_name":"KNeighbors Classification (TR Eikon)",
+  "algorithm_filename":"Knn_Ohne_Featureboost.py",
+  "params":{
+    "n_neighbors":{"type":"integer","default":5},
+    "n_jobs":{"type":"integer","default":"None"},
+    "weights":{"type":"select","options":["uniform","distance"],"default":"uniform"},
+    "algorithm":{"type":"select","options":["auto","ball_tree","kd_tree","brute"],"default":"auto"},
+    "leaf_size":{"type":"integer","default":30},
+    "p":{"type":"integer","default":2},
+    "metric":{"type":"select","options":["euclidean","manhattan","chebyshev","minkowskit"],"default":"minkowski"}
+  },
+  "db_fields":{
+    "label":"String(100)",
+    "accuracy":"Float",
+    "precision00":"Float",
+    "recall00":"Float",
+    "f1_score00":"Float",
+    "support00":"Float",
+    "precision01":"Float",
+    "recall01":"Float",
+    "f1_score01":"Float",
+    "support01":"Float",
+    "macro_avg_precision":"Float",
+    "macro_avg_recall":"Float",
+    "macro_avg_f1_score":"Float",
+    "macro_avg_support":"Float",
+    "weighted_avg_precision":"Float",
+    "weighted_avg_recall":"Float",
+    "weighted_avg_f1_score":"Float",
+    "weighted_avg_support":"Float"
+  }
+}

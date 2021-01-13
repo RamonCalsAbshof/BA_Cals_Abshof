@@ -1,0 +1,40 @@
+.expand-container{
+  display:flex;
+  flex-wrap:wrap;
+  padding:20px 0;
+  width:100%;
+  justify-content:center;
+}
+.expand-container .expand{
+  box-shadow: 0 10px 20px rgba(0,0,0,.6);
+  border-radius:10px;
+  padding:20px;
+  margin: 0 15px;
+
+}
+
+.expand h2{
+  text-align:center;
+}
+.expand table{
+}
+table th{
+  padding:0 5px;
+}
+table td{
+  padding:1px 5px;
+  border-radius:5px;
+}
+table tr:nth-child(even){
+  background-color:#eee;
+}
+.expand-row{
+  text-align:left;
+}
+
+.expand-row .expand-key{
+}
+
+.expand-row .expand-value{
+
+}

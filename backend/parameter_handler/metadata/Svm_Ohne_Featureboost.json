@@ -1,0 +1,38 @@
+{
+  "algorithm_display_name":"Support Vector Classification (TR Eikon)",
+  "algorithm_filename":"Svm_Ohne_Featureboost.py",
+  "params":{
+    "C":{"type":"number","default":1},
+    "degree":{"type":"integer","default":3},
+    "gamma":{"type":"select","options":["scale","auto"],"default":"scale"},
+    "coef0":{"type":"number","default":0},
+    "shrinking":{"type":"bool","default":"True"},
+    "probability":{"type":"bool","default":"False"},
+    "tol":{"type":"number","default":0.001},
+    "max_iter":{"type":"integer","default":-1},
+    "decision_function_shape":{"type":"select","options":["ovo","ovr"],"default":"ovr"},
+    "break_ties":{"type":"bool","default":"False"},
+    "random_state":{"type":"integer","default":"None"}
+  },
+
+  "db_fields":{
+    "label":"String(100)",
+    "accuracy":"Float",
+    "precision00":"Float",
+    "recall00":"Float",
+    "f1_score00":"Float",
+    "support00":"Float",
+    "precision01":"Float",
+    "recall01":"Float",
+    "f1_score01":"Float",
+    "support01":"Float",
+    "macro_avg_precision":"Float",
+    "macro_avg_recall":"Float",
+    "macro_avg_f1_score":"Float",
+    "macro_avg_support":"Float",
+    "weighted_avg_precision":"Float",
+    "weighted_avg_recall":"Float",
+    "weighted_avg_f1_score":"Float",
+    "weighted_avg_support":"Float"
+  }
+}

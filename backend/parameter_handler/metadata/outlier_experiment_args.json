@@ -1,0 +1,29 @@
+{
+  "algorithm_display_name":"Outlier Detector",
+  "algorithm_filename":"outlier_experiment_args.py",
+  "params":{
+    "features":{"type":"feature_list", "min":2},
+    "normalization_feature":{"type":"feature", "required":"True"},
+    "no_companies":{"type":"integer", "required":"True"},
+    "start_year":{"type":"integer", "required":"True", "min":1998, "max":2017},
+    "end_year":{"type":"integer", "required":"True" ,"min":1999, "max":2018},
+    "minpts":{"type":"integer", "required":"True"},
+    "eps":{"type":"number", "required":"True"},
+    "tau":{"type":"number", "required":"True"},
+    "fill_missing_values":{"type":"bool", "default":"False"}
+  },
+  "db_fields":{
+    "data":"String(20)",
+    "num_features":"Integer",
+    "precision":"Float",
+    "recall":"Float",
+    "f1_score":"Float",
+    "accuracy":"Float",
+    "true_positive":"Integer",
+    "true_negative":"Integer",
+    "false_positive":"Integer",
+    "false_negative":"Integer",
+    "avg_num_clusters":"Float",
+    "label":"String(100)"
+  }
+}

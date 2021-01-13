@@ -1,0 +1,24 @@
+{
+  "algorithm_display_name":"Isolation Forest (TR Eikon)",
+  "algorithm_filename":"Isolaforest_Ohne_Featureboost.py",
+  "params":{
+        "n_estimators":{"type":"integer", "default":100},
+        "max_samples":{"type":"number", "default":"auto"},
+        "contamination":{"type":"number","default":"auto"},
+        "max_features":{"type":"number", "default":1},
+        "bootstrap":{"type":"bool", "default":"False"},
+        "n_jobs":{"type":"integer", "default":"None"},
+        "random_state":{"type":"integer", "default":"None"}
+  },
+
+  "db_fields":{
+    "label":"String(100)",
+    "accuracy":"Float",
+    "precision00":"Float",
+    "recall00":"Float",
+    "f1_score00":"Float",
+    "precision01":"Float",
+    "recall01":"Float",
+    "f1_score01":"Float"
+  }
+}

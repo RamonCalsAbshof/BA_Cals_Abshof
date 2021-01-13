@@ -1,0 +1,29 @@
+{
+  "algorithm_display_name":"AdaBoost Classification (TR Eikon) - Featureboost",
+  "algorithm_filename":"AdaBoost_Mit_Featureboost.py",
+  "params":{
+    "n_estimators":{"type":"integer", "default":50},
+    "learning_rate":{"type":"number", "default":1},
+    "random_state":{"type":"number", "default":"None"}
+  },
+  "db_fields":{
+    "label":"String(100)",
+    "accuracy":"Float",
+    "precision00":"Float",
+    "recall00":"Float",
+    "f1_score00":"Float",
+    "support00":"Float",
+    "precision01":"Float",
+    "recall01":"Float",
+    "f1_score01":"Float",
+    "support01":"Float",
+    "macro_avg_precision":"Float",
+    "macro_avg_recall":"Float",
+    "macro_avg_f1_score":"Float",
+    "macro_avg_support":"Float",
+    "weighted_avg_precision":"Float",
+    "weighted_avg_recall":"Float",
+    "weighted_avg_f1_score":"Float",
+    "weighted_avg_support":"Float"
+  }
+}

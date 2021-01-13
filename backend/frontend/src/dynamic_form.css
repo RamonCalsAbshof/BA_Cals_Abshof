@@ -1,0 +1,92 @@
+h1 {
+}
+
+.form-box{
+  align:center;
+  padding:40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  background:white;
+  color:black;
+  font-size: 1em;
+  max-width:700px;
+  overflow:auto;
+}
+
+.form-box h2{
+  margin:0 0 30px;
+  padding: 0;
+  text-align: center;
+}
+ 
+.form-box select{
+  display: inline-block;
+  appearance: none;
+  outline: 0;
+  cursor:pointer;
+  border: 0;
+  background:lightgrey;
+  padding: 10px 50px 10px 10px;
+  font-size:1em;
+}
+
+.form-box .param-box{
+}
+
+.form-box .param-box input{
+  width: 100%;
+  color: black;
+  padding:10px;
+  border:1px solid #ced6e0;
+  border-radius:10px;
+  outline: none;
+  background: transparent;
+  font-size:0.9em;
+}
+
+.form-box .param-box label{
+  width:100%;
+  font-size:16px;
+}
+
+.form-box .param-box .list-param{
+}
+
+.form-box .param-box button{
+  outline:none;
+  padding:7px 10px;
+  margin:0;
+  border:0;
+  background-color: lightgrey; 
+  color: black;
+  border-radius:10px;
+  font-size:1em;
+}
+
+.form-box .param-box button:hover{
+  outline:none;
+  padding:7px 10px;
+  margin:0;
+  border:0;
+  transition: all .2s ease;
+  cursor: pointer;
+  background: grey;
+  color: white;
+  border-radius:10px;
+  font-size:1em;
+}
+
+.error {
+  color:red;
+  display: inline-block;
+  margin-left: 20px;
+  font-size:24px;
+}
+
+.success {
+  display:inline-block;
+  margin-left: 20px;
+  color:green;
+  font-size:24px;
+}
+

@@ -1,0 +1,22 @@
+#!/bin/sh
+rm backend/parameter_handler/algorithms/AdaBoost_Mit_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/AdaBoost_Ohne_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/DecisionTree_Mit_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/DecisionTree_Ohne_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Isolaforest_Mit_FeatureBoost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Isolaforest_Ohne_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Knn_Mit_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Knn_Ohne_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Randomforest_Mit_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Randomforest_Ohne_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Svm_Mit_Featureboost/csv/testdateimitlabels.csv
+rm backend/parameter_handler/algorithms/Svm_Ohne_Featureboost/csv/testdateimitlabels.csv
+
+rm backend/parameter_handler/algorithms/svm_negative_Mit_FeatureBoost/csv/dataset_negative_audit_analytics.csv
+rm backend/parameter_handler/algorithms/svm_negative_Ohne_FeatureBoost/csv/dataset_negative_audit_analytics.csv
+
+rm backend/parameter_handler/algorithms/svm_positive_Mit_FeatureBoost/csv/dataset_positive_audit_analytics.csv
+rm backend/parameter_handler/algorithms/svm_positive_Ohne_FeatureBoost/csv/dataset_positive_audit_analytics.csv
+
+rm backend/parameter_handler/algorithms/svm_po_ne_Mit_FeatureBoost/csv/dataset_negative_positive_audit_analytics.csv
+rm backend/parameter_handler/algorithms/Svm_po_ne_Ohne_FeatureBoost/csv/dataset_negative_positive_audit_analytics.csv

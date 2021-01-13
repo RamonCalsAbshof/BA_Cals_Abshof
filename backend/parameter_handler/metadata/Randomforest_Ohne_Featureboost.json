@@ -1,0 +1,42 @@
+{
+  "algorithm_display_name": "Random Forest Classification (TR Eikon)",
+  "algorithm_filename":"Randomforest_Ohne_Featureboost.py",
+  "params":{
+    "n_estimators":{"type":"integer","default":100},
+    "max_depth":{"type":"integer","default":"None"},
+    "min_samples_split":{"type":"number","default":2},
+    "min_samples_leaf":{"type":"number","default":0},
+    "min_weight_fraction_leaf":{"type":"number", "default":1},
+    "max_leaf_nodes":{"type":"integer","default":"None"},
+    "max_features":{"type":"number","default":"auto"},
+    "min_impurity_decrease":{"type":"number", "default":0},
+    "min_impurity_split":{"type":"number", "default":"None"},
+    "bootstrap":{"type":"bool","default":"True"},
+    "class_weight":{"type":"select","options":["balanced","balanced_subsample"]},
+    "oob_score":{"type":"bool","default":"False"},
+    "n_jobs":{"type":"integer","default":"None"},
+    "max_samples":{"type":"number","default":"None"},
+    "random_state":{"type":"integer","default":"None"}
+  },
+
+  "db_fields":{
+    "label":"String(100)",
+    "accuracy":"Float",
+    "precision00":"Float",
+    "recall00":"Float",
+    "f1_score00":"Float",
+    "support00":"Float",
+    "precision01":"Float",
+    "recall01":"Float",
+    "f1_score01":"Float",
+    "support01":"Float",
+    "macro_avg_precision":"Float",
+    "macro_avg_recall":"Float",
+    "macro_avg_f1_score":"Float",
+    "macro_avg_support":"Float",
+    "weighted_avg_precision":"Float",
+    "weighted_avg_recall":"Float",
+    "weighted_avg_f1_score":"Float",
+    "weighted_avg_support":"Float"
+  }
+}
