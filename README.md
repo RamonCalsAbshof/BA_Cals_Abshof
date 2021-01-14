@@ -15,7 +15,7 @@ Die Python-Abhängigkeiten für das Back-End befinden sich in __requirements&#46
 In den Shell-Skripten __/backend/django_development&#46;sh__ und __/backend/django_production&#46;sh__ müssen folgende Umgebungsvariablen gesetzt werden:   
 __MYSQL_USER__ ist Benutzername des Nutzers, über den die Webanwendung auf die Datenbank zugreift. Es ist wichtig, dass MySQL selbst und der angegebene Datenbanknutzer externe Zugriffe für die Webanwendung erlauben.   
 __MYSQL_PASSWORD__ ist das Passwort des MySQL-Nutzers.  
-__MYSQL_HOST__ ist die IP-Adresse des Systems, auf dem der Datenbank-Server läuft.  
+__MYSQL_IP__ ist die IP-Adresse des Systems, auf dem der Datenbank-Server läuft.  
 __MYSQL_DB__ ist der Name einer neuen/leeren Datenbank innerhalb von MySQL, die von der Webanwendung verwaltet werden darf.  
 
 __/backend/django_development&#46;sh__ startet den development Server von Django.  
