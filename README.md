@@ -22,7 +22,7 @@ __/backend/django_development&#46;sh__ startet den development Server von Django
 
 __/backend/django_production&#46;sh__ startet einen production Server von gunicorn. Vor dem Start des production Servers sollte in __/backend/backend/settings&#46;py__ __debug=False__ gesetzt werden, damit fremden Nutzern keine sensiblen Daten angezeigt werden.  
 
-Die Webanwendnung initialisiert für alle vorhandenen Algorithmen jeweils eigene Tabellen und eine Tabelle __run__ für Metadaten zu einzelnen Durchläufen in der MYSQL_DB Datenbank.
+Die Webanwendnung initialisiert für alle vorhandenen Algorithmen jeweils eine eigene Tabelle und eine Tabelle __run__ für Metadaten zu einzelnen Durchläufen in der MYSQL_DB Datenbank.
 
 Es muss beachtet werden, dass der Algorithmus "Outlier Detector" Daten aus einer Datenbank der Heinrich-Heine-Universität bezieht. Deshalb muss entweder ein entsprechender VPN verwendet werden, oder ein direkter Zugriff auf das Universitäts-WLAN bestehen.
 
