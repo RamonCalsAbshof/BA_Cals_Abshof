@@ -15,14 +15,16 @@ class DockerHandler():
 
         init_script ="./init_script.sh"
         data_as_string = data_as_string[1:-1]
+        algorithm_on_host = 'algorithms_on_host/' + str(filename_dir)
         #startet Container mit Python-Skript Startbefehl
         client.containers.run(
                 "calc_wrapper", 
                 command=algorithm_startup,
                 remove=True, 
                 detach=True,
+                network='ba_cals_abshof_default',
                 volumes={
-                    os.path.join(settings.ALGORITHMS, filename_dir):{
+                    os.path.join(os.environ.get('ALGORITHMS_ON_HOST'), 'algorithms_on_host', filename_dir):{
                         'bind':'/usr/src/app/','mode':'rw'
                         }
                     },

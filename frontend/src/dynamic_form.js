@@ -32,7 +32,7 @@ class AlgorithmSelector extends React.Component{
 
   //fragt verfügbaren Algorithmen an
   loadResults = () => {
-    axios.get("http://localhost:8000/algorithms")
+    axios.get('http://localhost:' + process.env.REACT_APP_API_PORT + '/api/algorithms')
       .then(res => this.setState({algorithms : res.data }))
       .catch(err => console.log(err));
   }
@@ -233,7 +233,7 @@ class AlgorithmFormpage extends React.Component{
     this.setState({loading : true});
     setTimeout(() => {
       let submit = this.prepareSubmit()
-      axios.post("http://localhost:8000/submit/",submit)
+      axios.post('http://localhost:' + process.env.REACT_APP_API_PORT + '/api/submit/',submit)
         .then(res => {
           console.log(res);
           this.setState({loading : false, success : true, error : false});

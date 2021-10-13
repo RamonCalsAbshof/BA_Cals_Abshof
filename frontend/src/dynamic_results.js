@@ -24,7 +24,7 @@ class DynamicResults extends React.Component{
   }
 
   loadTabledata = () => {
-    axios.get("http://localhost:8000/tabledata")
+    axios.get('http://localhost:' + process.env.REACT_APP_API_PORT + '/api/tabledata')
       .then(res => this.setState({table_data : res.data.table_data, dataIsLoaded : true }))
       .catch(err => console.log(err));
   }

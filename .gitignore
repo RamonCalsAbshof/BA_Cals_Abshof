@@ -1,1 +1,14 @@
 /django_venv
+*.log
+*.pyc
+*.db
+__pycache__
+media
+.env
+.venv
+venv
+node_modules
+.DS_Store
+.gitignore
+*.swp
+algorithms_on_host

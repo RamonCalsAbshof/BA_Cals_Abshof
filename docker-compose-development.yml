@@ -1,0 +1,58 @@
+
+version: "3"
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend-development
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
+    depends_on: 
+      - backend
+
+  db:
+    container_name: db
+    image: mysql
+    volumes:
+      - project_db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    ports:
+      - "3307:3306" # for testing from host
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    volumes:
+      - static_data:/vol/web
+      - ${PWD}/algorithms_on_host:/backend/parameter_handler/algorithms_on_host
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DEBUG=1
+      - ALGORITHMS_ON_HOST=${PWD}
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_IP=${MYSQL_IP}
+      - MYSQL_DB=${MYSQL_DB}
+    ports:
+      - "8000:8000"
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - db
+
+    
+
+volumes:
+  project_db_data:
+  static_data:
+  algorithms_on_host:

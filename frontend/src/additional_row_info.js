@@ -18,7 +18,7 @@ class AdditionalRowInfo extends React.Component{
   //fordert die Metadaten eines Durchlaufs für Input Parameters an,
   //wenn der Benutzer in die erweiterte Ansicht geht
   getRunID = () => {
-    axios.get("http://localhost:8000/run/"+this.props.data.run_id)
+    axios.get('http://localhost:' + process.env.REACT_APP_API_PORT + '/api/run/' + this.props.data.run_id)
       .then(res => {
         let without_params = res.data;
         let params = JSON.parse(res.data.parameters.slice(1,-1));

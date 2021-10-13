@@ -1,0 +1,49 @@
+version: "3"
+services:
+  proxy:
+    container_name: proxy-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.proxy
+    volumes:
+      - static_data:/vol/static
+    ports:
+      - "80:8000"
+    depends_on: 
+      - backend
+
+  db:
+    container_name: db
+    image: mysql
+    volumes:
+      - project_db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    volumes:
+      - static_data:/vol/web
+      - ${PWD}/algorithms_on_host:/backend/parameter_handler/algorithms_on_host
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - ALGORITHMS_ON_HOST=${PWD}
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_IP=${MYSQL_IP}
+      - MYSQL_DB=${MYSQL_DB}
+    depends_on:
+      - db
+
+    
+
+volumes:
+  project_db_data:
+  static_data:
+  algorithms_on_host:
