@@ -1,8 +1,14 @@
 import React from 'react';
 import axios from "axios";
-import './dynamic_form.css';
+import './AlgorithmSelector.css';
 import ReactLoading from 'react-loading';
 import AllFeaturesSelect from './all_features.js';
+import styled from 'styled-components';
+
+const CenteringWrapper = styled.div`
+  display:flex;
+  justify-content: center;
+`;
 
 //Rendert die Ansicht, in der der Benutzer einen Algorithmus auswählen kann
 class AlgorithmSelector extends React.Component{
@@ -39,18 +45,20 @@ class AlgorithmSelector extends React.Component{
 
   render(){
     return(
-      <div className="form-box">
-        <h2>Algorithm Formpage</h2>
-        <select name="algorithm_names" onChange={this.selectAlgorithm}>
-          <option value="default"> select an algorithm </option>
-          {this.state.algorithms.map((value,index) => {
-            return( 
-              <option key={index} value={index}>{value.algorithm_display_name}</option>
-            )
-          })}
-        </select>
-        {this.state.algorithm_set === 1 && <AlgorithmFormpage key={this.state.key} algorithm={this.state.algorithms[this.state.algorithm_index]} />}
-      </div>
+      <CenteringWrapper>
+        <div className="form-box">
+          <h2>Algorithm Formpage</h2>
+          <select name="algorithm_names" onChange={this.selectAlgorithm}>
+            <option value="default"> select an algorithm </option>
+            {this.state.algorithms.map((value,index) => {
+              return( 
+                <option key={index} value={index}>{value.algorithm_display_name}</option>
+              )
+            })}
+          </select>
+          {this.state.algorithm_set === 1 && <AlgorithmFormpage key={this.state.key} algorithm={this.state.algorithms[this.state.algorithm_index]} />}
+        </div>
+      </CenteringWrapper>
     );
   }
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import axios from "axios";
 import DataTable from 'react-data-table-component';
 //DataTable von https://www.npmjs.com/package/react-data-table-component#datatable-properties
-import './dynamic_results.css';
-import AdditionalRowInfo from './additional_row_info.js';
+import './Results.css';
+import AdditionalRowInfo from './AdditionalRowInfo.js';
 
 //Fordert alle Ergebnisdaten der Algorithmen an 
 //Wenn alle Daten vom Back-End angekommen sind, wird die Tabelle mit den Ergebnisdaten gerendert
@@ -51,7 +51,7 @@ class ResultTable extends React.Component{
       {selector:"f1_score",name:"F1-Score", sortable:true, wrap:true, compact:true, right:true},
       {selector:"accuracy",name:"Accuracy", sortable:true, wrap:true, compact:true, right:true},
       {selector:"label",name:"Label", sortable:true, wrap:true, compact:true, center:true,minWidth:"100px"},
-      {selector:"finished_date",name:"Finished Date", sortable:true, wrap:true, compact:true, center:true}]
+      {selector:"finished_date",name:"Finished Date (UTC)", sortable:true, wrap:true, compact:true, center:true}]
 
     this.state = {
       column_names : header_spec,
@@ -104,7 +104,7 @@ class ResultTable extends React.Component{
           pagination
           expandableRows
           dense
-          expandableRowsComponent={<AdditionalRowInfo/>}
+          expandableRowsComponent={AdditionalRowInfo}
           striped
         />
       </div>

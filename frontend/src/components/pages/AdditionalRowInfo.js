@@ -1,5 +1,5 @@
 import React from 'react';
-import './additional_row_info.css';
+import './AdditionalRowInfo.css';
 import axios from "axios";
 
 //Rendert die Erweiterte Ansicht, wenn der Nutzer diese Anfordert

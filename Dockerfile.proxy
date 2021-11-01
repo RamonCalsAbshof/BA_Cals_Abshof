@@ -7,10 +7,9 @@ RUN npm run build
 FROM nginx:stable-alpine
 RUN mkdir -p /vol/static/js
 RUN mkdir -p /vol/static/css
+RUN mkdir -p /vol/static/media
 
 COPY --from=build /app/build /usr/share/nginx/html
-RUN mv /usr/share/nginx/html/static/js/* /vol/static/js/.
-RUN mv /usr/share/nginx/html/static/css/* /vol/static/css/.
 
 COPY ./proxy/default.conf /etc/nginx/conf.d/default.conf
 COPY ./proxy/uwsgi_params /etc/nginx/uwsgi_params
